@@ -1,0 +1,410 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*以上是CSS reset*/
+
+
+/*全域設定*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: 1002px;
+    margin: 0 auto;
+}
+
+.topBar {
+    display: flex;
+    justify-content: flex-end;
+    background: #f6f6f6;
+    padding: 5px 3px;
+}
+
+.facebook a,
+.twitter a {
+    display: flex;
+    align-items: center;
+    padding: 0px 7px;
+}
+
+.facebook a {
+    color: #45609d;
+    border-right: 1px solid #cbcbcb;
+}
+
+.twitter a {
+    color: #00aef2;
+}
+
+.facebook a:hover,
+.twitter a:hover {
+    background: #cbcbcb;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo a {
+    background-image: url(./img/logo.png);
+    width: 224px;
+    height: 50px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.header .navbar {
+    width: 270px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .navbar a {
+    color: #00cb9b;
+    font-weight: 600;
+    padding: 16px 10px;
+}
+
+.header .navbar a:hover {
+    border-bottom: 3px solid #00cb9b;
+}
+
+.banner {
+    background-image: url(./img/banner.png);
+    width: 1002px;
+    padding: 93px 0px;
+}
+
+.banner h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 37px 20px;
+    line-height: 1.2;
+}
+
+.course {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.courseItem {
+    width: 31%;
+    padding: 10px 20px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    box-shadow: 0px 3px 2px #e6e6e6;
+}
+
+.courseItem .logo {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courseItemTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.courseItemText {
+    line-height: 1.5;
+}
+
+.courseItemList {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.compare {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compareTitle {
+    font-size: 24px;
+    font: 600px;
+    margin-bottom: 28px;
+}
+
+.compareBody th,
+.compareBody td {
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 8px 100px 8px 20px;
+}
+
+.compareBody th {
+    background: #f7f7f7;
+    text-align: left;
+    font-weight: 600;
+}
+
+.highlight {
+    color: #00cb9b;
+}
+
+.contact {
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    background: linear-gradient(#006749, #00966f);
+}
+
+.contactTitle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-bottom: 30px;
+}
+
+.contactBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactBody textarea {
+    width: 460px;
+    height: 245px;
+    border-radius: 2px;
+}
+
+.contactData {
+    width: 460px;
+}
+
+.inputName,
+.inputTel,
+.inputEmail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+input {
+    padding: 8px 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+.send {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send .btn {
+    background: #00cc98;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.send .btn:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #00cc98;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .logo a {
+    background-image: url(./img/footerLogo.png);
+    width: 171px;
+    height: 36px;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contactUs {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contactUs .email,
+.contactUs .phoneNumber {
+    display: flex;
+    font-size: 14px;
+}
+
+.email a,
+.phoneNumber a {
+    color: #e72d71;
+}
+
+.contactUs .email {
+    margin-bottom: 10px;
+}
+
+.email a:hover,
+.phoneNumber a:hover {
+    color: #00cb9b;
+}
