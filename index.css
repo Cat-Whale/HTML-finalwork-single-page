@@ -162,6 +162,9 @@ a {
     margin: 0 auto;
 }
 
+
+/*layoue設定*/
+
 .topBar {
     display: flex;
     justify-content: flex-end;
@@ -196,6 +199,12 @@ a {
     justify-content: space-between;
 }
 
+@media(max-width: 414px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
 .header .logo a {
     background-image: url(./img/logo.png);
     width: 224px;
@@ -221,158 +230,24 @@ a {
     border-bottom: 3px solid #00cb9b;
 }
 
-.banner {
-    background-image: url(./img/banner.png);
-    width: 1002px;
-    padding: 93px 0px;
-}
-
-.banner h2 {
-    color: #ffffff;
-    font-size: 36px;
-    font-weight: 700;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 37px 20px;
-    line-height: 1.2;
-}
-
-.course {
-    margin-top: 64px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.courseItem {
-    width: 31%;
-    padding: 10px 20px;
-    border: 1px solid #e6e6e6;
-    border-top: none;
-    box-shadow: 0px 3px 2px #e6e6e6;
-}
-
-.courseItem .logo {
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.courseItemTitle {
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.courseItemText {
-    line-height: 1.5;
-}
-
-.courseItemList {
-    list-style-type: disc;
-    padding-left: 20px;
-    line-height: 1.5;
-}
-
-.compare {
-    margin-top: 64px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.compareTitle {
-    font-size: 24px;
-    font: 600px;
-    margin-bottom: 28px;
-}
-
-.compareBody th,
-.compareBody td {
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 8px 100px 8px 20px;
-}
-
-.compareBody th {
-    background: #f7f7f7;
-    text-align: left;
-    font-weight: 600;
-}
-
-.highlight {
-    color: #00cb9b;
-}
-
-.contact {
-    color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 60px;
-    background: linear-gradient(#006749, #00966f);
-}
-
-.contactTitle {
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.5;
-    margin-top: 6px;
-    margin-bottom: 30px;
-}
-
-.contactBody {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contactBody textarea {
-    width: 460px;
-    height: 245px;
-    border-radius: 2px;
-}
-
-.contactData {
-    width: 460px;
-}
-
-.inputName,
-.inputTel,
-.inputEmail {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-    font-size: 14px;
-}
-
-input {
-    padding: 8px 10px;
-    margin-top: 6px;
-    border-radius: 5px;
-    border: none;
-}
-
-.send {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.send .btn {
-    background: #00cc98;
-    color: #ffffff;
-    font-size: 14px;
-    padding: 10px 20px;
-    font-weight: 600;
-}
-
-.send .btn:hover {
-    cursor: pointer;
-    background: #ffffff;
-    color: #00cc98;
-}
-
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 414px) {
+    .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .footer .logo a {
@@ -407,4 +282,277 @@ input {
 .email a:hover,
 .phoneNumber a:hover {
     color: #00cb9b;
+}
+
+
+/*content設定*/
+
+.banner {
+    background-image: url(./img/banner.png);
+    background-repeat: no-repeat;
+    padding: 93px 0px;
+}
+
+@media(max-width: 768px) {
+    .banner {
+        background-position: -200px 0;
+    }
+}
+
+@media(max-width: 414px) {
+    .banner {
+        background-position: -500px 0;
+    }
+}
+
+.banner h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 37px 20px;
+    line-height: 1.2;
+}
+
+@media(max-width: 414px) {
+    .banner h2 {
+        font-size: 30px;
+    }
+}
+
+.course {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media(max-width: 414px) {
+    .course {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+.courseItem {
+    width: 31%;
+    padding: 10px 20px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    box-shadow: 0px 3px 2px #e6e6e6;
+}
+
+@media(max-width: 414px) {
+    .courseItem {
+        width: 98%;
+        margin-bottom: 20px;
+    }
+}
+
+.courseItem .logo {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.courseItemTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.courseItemText {
+    line-height: 1.5;
+}
+
+.courseItemList {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.5;
+}
+
+.compare {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 414px) {
+    .compare {
+        display: none;
+    }
+}
+
+.compareTitle {
+    font-size: 24px;
+    font: 600px;
+    margin-bottom: 28px;
+}
+
+.compareBody th,
+.compareBody td {
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 8px 100px 8px 20px;
+}
+
+@media(max-width: 768px) {
+    .compareBody th,
+    .compareBody td {
+        padding: 8px 50px 8px 20px;
+    }
+}
+
+.compareBody th {
+    background: #f7f7f7;
+    text-align: left;
+    font-weight: 600;
+}
+
+.highlight {
+    color: #00cb9b;
+}
+
+.contact {
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    background: linear-gradient(#006749, #00966f);
+}
+
+@media(max-width: 414px) {
+    .contact {
+        margin-top: 0px;
+    }
+}
+
+.contactTitle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 414px) {
+    .contactTitle {
+        margin-bottom: 10px;
+    }
+}
+
+.contactBody {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 414px) {
+    .contactBody {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contactBody textarea {
+    width: 460px;
+    height: 245px;
+    border-radius: 2px;
+    margin-right: 20px;
+}
+
+@media(max-width: 768px) {
+    .contactBody textarea {
+        width: 350px;
+        height: 175px;
+    }
+}
+
+@media(max-width: 414px) {
+    .contactBody textarea {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+}
+
+.contactData {
+    width: 460px;
+}
+
+@media(max-width: 768px) {
+    .contactData {
+        width: 350px;
+    }
+}
+
+.inputName,
+.inputTel,
+.inputEmail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+@media(max-width: 768px) {
+    .inputName,
+    .inputTel,
+    .inputEmail {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 414px) {
+    .inputName,
+    .inputTel,
+    .inputEmail {
+        margin-bottom: 16px;
+    }
+}
+
+input {
+    padding: 8px 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+@media(max-width: 768px) {
+    input {
+        padding: 4px 5px;
+        margin-top: 3px;
+    }
+}
+
+.send {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media(max-width: 414px) {
+    .send {
+        justify-content: center;
+    }
+}
+
+.send .btn {
+    background: #00cc98;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+@media(max-width: 414px) {
+    .send .btn {
+        padding: 10px 100px;
+        font-size: 16px;
+    }
+}
+
+.send .btn:hover {
+    cursor: pointer;
+    background: #ffffff;
+    color: #00cc98;
 }
