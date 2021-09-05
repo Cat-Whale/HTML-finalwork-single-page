@@ -18,8 +18,11 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png" />
 
     <title>HTML、CSS最終作業(一頁式網頁)</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
 
-    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -35,40 +38,69 @@
         <div class="header">
             <h1 class="logo"><a href="#">Hex School</a></h1>
             <ul class="navbar">
-                <li class="navbarItem"><a href="#">首頁</a></li>
-                <li class="navbarItem"><a href="#">產品介紹</a></li>
-                <li class="navbarItem"><a href="#">聯絡我們</a></li>
+                <li class="navbarItem"><a class="current" href="#">首頁</a></li>
+                <li class="navbarItem"><a class="dropDown1" href="#">產品介紹</a>
+                    <ul class="dropDownOpen1">
+                        <li><a href="#">HTML 5</a></li>
+                        <li><a href="#">響應式設計</a></li>
+                        <li><a href="#">jQuery</a></li>
+                    </ul>
+                </li>
+                <li class="navbarItem"><a class="dropDown2" href="#">聯絡我們</a>
+                    <ul class="dropDownOpen2">
+                        <li><a href="#">關於六角</a></li>
+                        <li><a href="#">常見問答</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
+
         <div class="banner">
-            <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
+            <div class="swiper-container">
+                <h2>六角學院<br>讓您奠定良好的前端基礎</h2>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner1"><img class="deskPicture" src="./img/bg_index.png" alt=""><img class="mobilePicture" src="./img/bg_index-414.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="deskPicture" src="./img/bg_course.png" alt=""><img class="mobilePicture" src="./img/bg_course-414.png" alt=""></div>
+                    <div class="swiper-slide"><img class="deskPicture" src="./img/bg_QA.png" alt=""><img class="mobilePicture" src="./img/bg_QA-414.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </div>
+
         <div class="content">
             <ul class="course">
                 <li class="courseItem">
-                    <div class="logo"><img src="./img/html.png" alt="html5 logo"></div>
-                    <h3 class="courseItemTitle">HTML 5 基礎教學</h3>
-                    <p class="courseItemText">
-                        主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
+                    <a class="example-image-link logo" href="./img/lightbox-html.png" data-lightbox="example-set"><img class="example-image" src="./img/html.png" alt="" /></a>
+                    <div class="courseItemBody">
+                        <h3 class="courseItemTitle">HTML 5 基礎教學</h3>
+                        <p class="courseItemText">
+                            主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
+                    </div>
                 </li>
                 <li class="courseItem">
-                    <div class="logo"><img src="./img/rwd.png" alt="rwd logo"></div>
-                    <h3 class="courseItemTitle">響應式網站設計</h3>
-                    <p class="courseItemText">
-                        響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。
-                    </p>
+                    <a class="example-image-link logo" href="./img/lightbox-rwd.png" data-lightbox="example-set"><img class="example-image" src="./img/rwd.png" alt="" /></a>
+                    <div class="courseItemBody">
+                        <h3 class="courseItemTitle">響應式網站設計</h3>
+                        <p class="courseItemText">
+                            響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。
+                        </p>
+                    </div>
                 </li>
                 <li class="courseItem">
-                    <div class="logo"><img src="./img/jQuery.png" alt="jQuery logo"></div>
-                    <h3 class="courseItemTitle">jQuery 實戰教學</h3>
-                    <p class="courseItemText">
-                        本課程有以下特色</p>
-                    <ul class="courseItemList">
-                        <li>瞭解變數的使用方法</li>
-                        <li>學習並操作DOM</li>
-                        <li>學習基本數學運算方法</li>
-                        <li>套件的操作及運用</li>
-                    </ul>
+                    <a class="example-image-link logo" href="./img/lightbox-jQuery.png" data-lightbox="example-set"><img class="example-image" src="./img/jQuery.png" alt="" /></a>
+                    <div class="courseItemBody">
+                        <h3 class="courseItemTitle">jQuery 實戰教學</h3>
+                        <p class="courseItemText">
+                            本課程有以下特色</p>
+                        <ul class="courseItemList">
+                            <li>瞭解變數的使用方法</li>
+                            <li>學習並操作DOM</li>
+                            <li>學習基本數學運算方法</li>
+                            <li>套件的操作及運用</li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <div class="compare">
@@ -154,6 +186,17 @@
             </ul>
         </div>
     </div>
+    <div class="top">
+        <a href="#">
+            <span class="material-icons topArrow">
+                arrow_upward
+            </span>
+        </a>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/all.js"></script>
 </body>
 
 </html>
